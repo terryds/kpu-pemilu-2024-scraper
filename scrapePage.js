@@ -1,6 +1,8 @@
 import scrapeTableData from "./scrapeTableData.js";
+import cluster from "./puppeteer_cluster.js";
 
-export default async function scrapePage(cluster, url, level, db) {
+
+export default async function scrapePage(url, level, db) {
 
     cluster.task(async ({page, data: { url, level, db} }) => {
         await page.goto(url, { waitUntil: "networkidle2" });
@@ -66,4 +68,10 @@ export default async function scrapePage(cluster, url, level, db) {
 
 
     cluster.queue({ url, level, db });
+
+
+    await cluster.idle();
+    console.log("Finished scraping all pages.");
+    await cluster.close();
+
 }
