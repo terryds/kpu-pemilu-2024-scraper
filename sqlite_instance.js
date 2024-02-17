@@ -30,7 +30,7 @@ export async function initDB() {
                 invalid_votes INTEGER,
                 total_valid_and_invalid_votes INTEGER
             )`);
-        // console.log('Table created or already exists.');
+        console.log('Table created or already exists.');
         return db;
     }
     catch (error) {
