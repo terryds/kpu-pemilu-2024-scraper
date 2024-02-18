@@ -1,5 +1,6 @@
 # Project archived
 
-This library uses Puppeteer to simulate going to browser & saving the data to SQlite.
-However, taken into account the number of links & results here, it doesn't make sense to use this since it's going to take a long time.
-Please refer to the new repository instead where we did some reverse engineering to make the process much more faster: https://github.com/terryds/pemilu-2024-scraper-kpu
+This library utilizes Puppeteer to simulate browser navigation and save data to SQLite. However, given the large number of links and results involved, using this method is not practical as it would be time-consuming.
+Please refer to our new repository, where we have applied reverse engineering to significantly expedite the process
+
+New repository: https://github.com/terryds/pemilu-2024-scraper-kpu
